@@ -1,0 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace project2.model
+{
+    public class ApplicationDbcontext: DbContext
+    {
+        public ApplicationDbcontext(DbContextOptions options):base(options) { }
+      
+        public DbSet<profile> profiles { get; set; }
+    }
+}
